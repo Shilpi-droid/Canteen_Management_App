@@ -1,4 +1,6 @@
 
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -123,8 +125,8 @@ class createPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top:50.0,bottom:0.0),
+          const Padding(
+            padding: EdgeInsets.only(top:50.0,bottom:0.0),
             child: SizedBox(
               height: 80,
               child: Text(

@@ -1,4 +1,4 @@
-name: food_delivery_app
+name: final_app
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -36,6 +36,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  font_awesome_flutter: ^8.10.0
+  google_fonts: ^1.1.1
 #  google_fonts: ^3.0.1
   lottie: ^1.4.3
 #  animated_bottom_navigation_bar: ^1.1.0
@@ -68,7 +70,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-    - assets/images/background_onboarding.jpg
+    # - assets/images/background_onboarding.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
