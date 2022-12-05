@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:final_app/palette.dart';
 import 'package:final_app/utils/colors.dart';
 import 'package:flutter/material.dart';

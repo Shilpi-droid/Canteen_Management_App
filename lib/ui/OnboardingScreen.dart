@@ -1,10 +1,12 @@
 
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types
 
+import 'package:final_app/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import 'RootPage.dart';
+// import 'RootPage.dart';
+import '../ui/screens/login-page.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -15,9 +17,11 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _pageController = PageController(initialPage: 0);
+
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
+    final deviceheight = MediaQuery.of(context).size.height;
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
@@ -27,7 +31,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          elevation: 0.0,
+          // elevation: 0.0,
           backgroundColor: Colors.transparent,
           actions: [
             Padding(
@@ -35,7 +39,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: InkWell(
                 onTap: () {
                   Navigator.pushReplacement(
-                      context, MaterialPageRoute(builder: (_) => const RootPage()));
+                      context, MaterialPageRoute(builder: (_) => const LoginPage()));
                 },
                 child: const Text(
                   'Skip',
@@ -53,9 +57,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           alignment: Alignment.center,
           children: [
             SizedBox(
-              height:650,
+              
+              height:deviceheight,
               child: Positioned(
-                bottom: 400,
+                bottom: 200,
                 left: 190,
                 child: PageView(
                   onPageChanged: (int page) {
@@ -83,16 +88,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
 
             Positioned(
-              bottom: 200,
-              left: 190,
+              bottom: deviceheight*.2,
               child: Row(
                 children: _buildIndicator(),
               ),
             ),
+            // Padding(padding: EdgeInsets.symmetric(vertical: 0),
+            // )
+            // Container(
+              
+            //   decoration: BoxDecoration(
+            //     image: DecorationImage(image: AssetImage('assets/images/line vector.png'),),
+            //   ),
+            // ),
+            
+
           ],
         ),
       ),
     );
+    
   }
 
   List<Widget> _buildIndicator() {
@@ -120,15 +135,16 @@ class createPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final deviceheight = MediaQuery.of(context).size.height;
     return Container(
-      padding: const EdgeInsets.only(),
+      padding: const EdgeInsets.only(), 
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Padding(
-            padding: EdgeInsets.only(top:50.0,bottom:0.0),
+            padding: EdgeInsets.only(top:0.0,bottom:0.0),
             child: SizedBox(
-              height: 80,
+              height: 50,
               child: Text(
                   'KAKU\'S CANTEEN',
                 textAlign: TextAlign.center,
@@ -142,28 +158,25 @@ class createPage extends StatelessWidget {
             ),
           ),
 
-          Padding(
+          Container(
             padding: const EdgeInsets.only(top:0.0),
             child: SizedBox(
-              height: 280,
+              height: 250,
               child: Lottie.asset(image),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: SizedBox(
-              height:40,
-            ),
-          ),
+          
            Padding(
              padding: const EdgeInsets.only(top:20.0),
              child: SizedBox(
               height:50,
-               //width: 30,
+               width: 30,
           ),
            ),
-          Image.asset("assets/images/line vector.png"),
+          
+          
         ],
+        
       ),
     );
   }

@@ -1,4 +1,6 @@
 
+// ignore_for_file: non_constant_identifier_names, unused_local_variable, prefer_const_constructors, sort_child_properties_last
+
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import '../../models/Food.dart';
@@ -64,7 +66,9 @@ class _HomePageState extends State<HomePage> {
                   // ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    // ignore: prefer_const_literals_to_create_immutables
                     children: [
+                      Text("hhhh"),
                     ],
                   ),
                 ),

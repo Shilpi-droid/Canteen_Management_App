@@ -1,10 +1,12 @@
+
+// ignore_for_file: prefer_const_constructors
+
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/ui/screens/cart_page.dart';
-import 'package:food_delivery_app/ui/screens/detail_page.dart';
-import 'package:food_delivery_app/ui/screens/favourite_page.dart';
-import 'package:food_delivery_app/ui/screens/home_page.dart';
-import 'package:food_delivery_app/ui/screens/profile_page.dart';
+import 'package:final_app/ui/screens/cart_page.dart';
+import 'package:final_app/ui/screens/favourite_page.dart';
+import 'package:final_app/ui/screens/home_page.dart';
+import 'package:final_app/ui/screens/profile_page.dart';
 import 'package:page_transition/page_transition.dart';
 
 import '../models/Food.dart';

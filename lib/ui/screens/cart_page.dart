@@ -53,7 +53,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/ui/screens/widgets/FoodWidget.dart';
+import '../screens/widgets/widgets.dart';
 import 'package:lottie/lottie.dart';
 
 import '../../models/Food.dart';
