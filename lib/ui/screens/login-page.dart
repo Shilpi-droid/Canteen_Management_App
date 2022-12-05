@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, sized_box_for_whitespace, avoid_unnecessary_containers, depend_on_referenced_packages, import_of_legacy_library_into_null_safe, non_constant_identifier_names, file_names
 
 
-
+import 'package:final_app/ui/Rootpage.dart';
 import 'package:final_app/palette.dart';
 import 'package:final_app/utils/colors.dart';
 import 'package:flutter/material.dart';
@@ -70,50 +70,57 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Form LoginForm() {
-    return Form(
-      child: Container(
-        child: Column(
-          children: [
-            EmailInput(
-              icon: FontAwesomeIcons.solidEnvelope,
-              hint: 'Email',
-              inputType: TextInputType.emailAddress,
-              inputAction: TextInputAction.next,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            PasswordInput(
-              icon: FontAwesomeIcons.lock,
-              hint: 'Password',
-              inputAction: TextInputAction.done,
-            ),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: AppColors.textColor,
+  Builder LoginForm() {
+    return Builder(
+      builder: (context) {
+        return Form(
+          child: Container(
+            child: Column(
+              children: [
+                EmailInput(
+                  icon: FontAwesomeIcons.solidEnvelope,
+                  hint: 'Email',
+                  inputType: TextInputType.emailAddress,
+                  inputAction: TextInputAction.next,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                PasswordInput(
+                  icon: FontAwesomeIcons.lock,
+                  hint: 'Password',
+                  inputAction: TextInputAction.done,
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Forgot Password?',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: AppColors.textColor,
+                      ),
+                    ),
                   ),
                 ),
-              ),
+                SizedBox(
+                  // width: double.infinity,
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStatePropertyAll(AppColors.mainColor)),
+                      onPressed: () {
+                        Navigator.push(
+                          context, MaterialPageRoute(builder: (_) => const RootPage()));
+                      },
+                      child: Text("LOGIN")),
+                )
+              ],
             ),
-            SizedBox(
-              // width: double.infinity,
-              child: ElevatedButton(
-                  style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStatePropertyAll(AppColors.mainColor)),
-                  onPressed: () {},
-                  child: Text("LOGIN")),
-            )
-          ],
-        ),
-      ),
+          ),
+        );
+      }
     );
   }
 }

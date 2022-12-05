@@ -57,21 +57,7 @@ class _HomePageState extends State<HomePage> {
             child:Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  // padding: const EdgeInsets.only(top:20),
-                  // decoration:BoxDecoration(
-                  //   color: Color(0xff6D2113).withOpacity(.),
-                  //   borderRadius: BorderRadius.circular(20),
-                  //
-                  // ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      Text("hhhh"),
-                    ],
-                  ),
-                ),
+                
                 Container(
                   //padding: const EdgeInsets.symmetric(horizontal: 12),
                   height: 50.0,

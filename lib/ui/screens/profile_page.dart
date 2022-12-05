@@ -1,5 +1,7 @@
+// ignore_for_file: sort_child_properties_last, prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/ui/screens/widgets/profile_widget.dart';
+import 'package:final_app/ui/screens/widgets/profile_widget.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
