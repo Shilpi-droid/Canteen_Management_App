@@ -70,7 +70,6 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -103,11 +102,11 @@ class _RootPageState extends State<RootPage> {
       ),
       
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.transparent,
+        // backgroundColor: Colors.transparent,
         color: Color(0xff6D2113),
         items: iconList,
         index: _bottomNavIndex,
-        // backgroundColor: AppColors.bgcolor40percent.withOpacity(0),
+        backgroundColor: Color(0xff6D2113).withOpacity(0.1),
         // backgroundColor: AppColors.bgcolor40percent,
         // buttonBackgroundColor: Colors.transparent,
 
