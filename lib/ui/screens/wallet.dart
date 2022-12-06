@@ -14,6 +14,7 @@ class WalletPage extends StatelessWidget {
             color: Color(0xff6D2113).withOpacity(0.1),
             image: DecorationImage(
               image: AssetImage("assets/images/Group.png"),
+               fit: BoxFit.cover,
             )),
       ),
     );
