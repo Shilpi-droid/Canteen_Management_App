@@ -183,7 +183,7 @@ class _HomePageState extends State<HomePage> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12),
               height: 30.0,
-              width: size.width,
+              width: deviceheight*.6,
               margin: EdgeInsets.only(left: 18.0, top: 15.0),
               child: Text(
                 'Choose a meal',
@@ -207,14 +207,16 @@ class _HomePageState extends State<HomePage> {
                 child: GridView.count(
                   primary: false,
                   // padding: const EdgeInsets.only(
-                  //     top: 20, left: 35, right: 35, bottom: 70),
-                  crossAxisSpacing: 20,
-                  mainAxisSpacing: 20,
+                  //     top: 20, left: 35, right: 35, bottom: 0),
+                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                  crossAxisSpacing: 30,
+                 
+                  mainAxisSpacing: 10,
                   crossAxisCount: 2,
                   children: <Widget>[
                     Container(
-                      height: deviceheight*.05,
-                      width: devicewidth*.2,
+                      // height: deviceheight*.05,
+                      // width: devicewidth*.2,
                       // padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: Color(0xff6D2113),
