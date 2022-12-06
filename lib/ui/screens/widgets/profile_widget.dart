@@ -17,6 +17,7 @@ class ProfileWidget extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
 
+
       decoration: BoxDecoration(
         color: Colors.transparent,//Color(0xff6D2113).withOpacity(0.025),
         // image: DecorationImage(
