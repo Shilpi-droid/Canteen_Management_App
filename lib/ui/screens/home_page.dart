@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import '../../models/Food.dart';
 import 'detail_page.dart';
+import 'package:final_app/ui/screens/breakfast.dart';
+import 'package:final_app/ui/screens/snacks.dart';
+import 'package:final_app/ui/screens/dinner.dart';
+import 'package:final_app/ui/screens/lunch.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -200,8 +204,14 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.all(Radius.circular(14.0),),
                         ),
                         alignment: Alignment.center,
-                        child: const Text("Breakfast", style:TextStyle(color:Colors.white70,fontSize: 20,)),
-                        //
+                        child: TextButton(
+                          style: TextButton.styleFrom(foregroundColor:Colors.white, ),
+                          onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=>const breakfast()));
+
+                          },
+                          child:const Text('Breakfast'),
+                        ),
                       ),
                       Container(
                         padding: const EdgeInsets.all(8),
@@ -210,18 +220,33 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.all(Radius.circular(14.0),),
                         ),
                         alignment: Alignment.center,
-                        child: const Text("Lunch", style:TextStyle(color:Colors.white70,fontSize: 20,)),
-                        //decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(14.0),),),
+                         child: TextButton(
+                          style: TextButton.styleFrom(foregroundColor:Colors.white, ),
+                          onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=>const lunch()));
+
+                          },
+                          child:const Text('lunch'),
+                        ),
                       ),
                       Container(
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           color: Color(0xff6D2113),
                           borderRadius: BorderRadius.all(Radius.circular(14.0),),
+
+
+
                         ),
                         alignment: Alignment.center,
-                        child: const Text("Snacks", style:TextStyle(color:Colors.white70,fontSize: 20,)),
-                        //decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(14.0),),),
+                        child: TextButton(
+                          style: TextButton.styleFrom(foregroundColor:Colors.white, ),
+                          onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=>const snacks()));
+
+                          },
+                          child:const Text('snacks'),
+                        ),
                       ),
                       Container(
                         padding: const EdgeInsets.all(8),
@@ -231,8 +256,14 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.all(Radius.circular(14.0),),
                         ),
                         alignment: Alignment.center,
-                        child: const Text("Dinner", style:TextStyle(color:Colors.white70,fontSize: 20,)),
-                        //decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(14.0),),),
+                        child: TextButton(
+                          style: TextButton.styleFrom(foregroundColor:Colors.white, ),
+                          onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=>const dinner()));
+
+                          },
+                          child:const Text('dinner'),
+                        ),
                       )
                     ],
                   )
