@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:final_app/utils/colors.dart';
 
@@ -6,9 +8,13 @@ class WalletPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppColors.loginbgColor,
+    return Scaffold(
+      body:  Container(
+        decoration: BoxDecoration(
+            color: Color(0xff6D2113).withOpacity(0.1),
+            image: DecorationImage(
+              image: AssetImage("assets/images/Group.png"),
+            )),
       ),
     );
   }
