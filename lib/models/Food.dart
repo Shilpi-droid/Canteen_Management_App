@@ -27,7 +27,7 @@ class Food {
         price: 22,
         category: 'Breakfast',
         foodItem: 'Alu Paratha',
-        imageURL: 'assets/images/AlooParatha.jpg',
+        imageURL: 'assets/images/aloo paratha new.png',
         isFavorated: false,
         // description:
         // 'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
@@ -106,7 +106,7 @@ class Food {
         price: 19,
         category: 'Dinner',
         foodItem: 'Pav Bhaji',
-        imageURL: 'assets/images/PavBhaji.jpeg',
+        imageURL: 'assets/images/pav bhajiii.png',
         isFavorated: false,
         // description:
         // 'This plant is one of the best plant. It grows in most of the regions in the world and can survive'

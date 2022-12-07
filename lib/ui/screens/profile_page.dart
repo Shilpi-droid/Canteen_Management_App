@@ -10,10 +10,13 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     final deviceheight = MediaQuery.of(context).size.height;
-      final devicewidth = MediaQuery.of(context).size.width;
+    final devicewidth = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        
+          appBar: AppBar(
+            backgroundColor: Color(0xff6D2113),
+            title: Text("Dashboard"),
+          ),
           body: SingleChildScrollView(
             child: Container(
               decoration: BoxDecoration(
@@ -30,10 +33,11 @@ class ProfilePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    width: devicewidth*.3,
+                    width: devicewidth * .3,
                     child: const CircleAvatar(
                       radius: 60,
-                      backgroundImage: ExactAssetImage('assets/images/profile_pic.jpg'),
+                      backgroundImage:
+                          ExactAssetImage('assets/images/profile_pic.jpg'),
                     ),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
@@ -73,7 +77,7 @@ class ProfilePage extends StatelessWidget {
                     height: 30,
                   ),
                   SizedBox(
-                    height: devicewidth ,
+                    height: devicewidth,
                     width: size.width,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,

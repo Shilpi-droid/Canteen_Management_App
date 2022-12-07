@@ -31,7 +31,7 @@ class _breakfastState extends State<breakfast> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/Group.png"),
-             fit: BoxFit.cover,
+            fit: BoxFit.cover,
           ),
         ),
         child: Padding(
@@ -62,7 +62,7 @@ class _breakfastState extends State<breakfast> {
                         ),
                       ),
                       SizedBox(
-                        width: devicewidth * .33,
+                        width: devicewidth * .25,
                       ),
                       Text(
                         "Rs. 50",
@@ -109,9 +109,15 @@ class _breakfastState extends State<breakfast> {
                 ),
               ),
 
+              SizedBox(
+                height: deviceheight * .02,
+              ),
+
               ///222
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                // padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: devicewidth * .01, vertical: 0.1),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xff6D2113),
@@ -130,7 +136,7 @@ class _breakfastState extends State<breakfast> {
                         ),
                       ),
                       SizedBox(
-                        width: devicewidth * .33,
+                        width: devicewidth * .25,
                       ),
                       Text(
                         "Rs. 50",
@@ -179,9 +185,15 @@ class _breakfastState extends State<breakfast> {
                 ),
               ),
 
-              //////33333
+              //33333
+
+              SizedBox(
+                height: deviceheight * .02,
+              ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                // padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: devicewidth * .01, vertical: 0.1),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xff6D2113),
@@ -200,7 +212,7 @@ class _breakfastState extends State<breakfast> {
                         ),
                       ),
                       SizedBox(
-                        width: devicewidth * .33,
+                        width: devicewidth * .25,
                       ),
                       Text(
                         "Rs. 50",
@@ -250,9 +262,12 @@ class _breakfastState extends State<breakfast> {
               ),
 
               ///4
-
+              SizedBox(
+                height: deviceheight * .02,
+              ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: devicewidth * .01, vertical: 0.1),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xff6D2113),
@@ -271,7 +286,7 @@ class _breakfastState extends State<breakfast> {
                         ),
                       ),
                       SizedBox(
-                        width: devicewidth * .33,
+                        width: devicewidth * .25,
                       ),
                       Text(
                         "Rs. 50",
@@ -321,9 +336,13 @@ class _breakfastState extends State<breakfast> {
               ),
 
               /////44444
-
+              SizedBox(
+                height: deviceheight * .02,
+              ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                // padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: devicewidth * .01, vertical: 0.1),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xff6D2113),
@@ -342,7 +361,7 @@ class _breakfastState extends State<breakfast> {
                         ),
                       ),
                       SizedBox(
-                        width: devicewidth * .3,
+                        width: devicewidth * .2,
                       ),
                       Text(
                         "Rs. 50",

@@ -197,7 +197,7 @@ class _HomePageState extends State<HomePage> {
             //
             Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
-                height: size.height * .5,
+                height: deviceheight * .36,
                 // decoration: BoxDecoration(
                 //   image: DecorationImage(
                 //     image: AssetImage("assets/images/Group.png"),
@@ -210,7 +210,6 @@ class _HomePageState extends State<HomePage> {
                   //     top: 20, left: 35, right: 35, bottom: 0),
                   padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                   crossAxisSpacing: 30,
-                 
                   mainAxisSpacing: 10,
                   crossAxisCount: 2,
                   children: <Widget>[
@@ -255,7 +254,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (_) => const lunch()));
                         },
-                        child: const Text('lunch'),
+                        child: const Text('Lunch'),
                       ),
                     ),
                     Container(
@@ -277,7 +276,7 @@ class _HomePageState extends State<HomePage> {
                               MaterialPageRoute(
                                   builder: (_) => const snacks()));
                         },
-                        child: const Text('snacks'),
+                        child: const Text('Snacks'),
                       ),
                     ),
                     Container(
@@ -299,7 +298,7 @@ class _HomePageState extends State<HomePage> {
                               MaterialPageRoute(
                                   builder: (_) => const dinner()));
                         },
-                        child: const Text('dinner'),
+                        child: const Text('Dinner'),
                       ),
                     )
                   ],
