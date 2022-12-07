@@ -37,8 +37,8 @@ class Food {
         foodId: 1,
         price: 18,
         category: 'Lunch',
-        foodItem: 'Alu Gobi',
-        imageURL: 'assets/images/AlooGobi.jpg',
+        foodItem: 'Pav Bhaji',
+        imageURL: 'assets/images/pav bhaji new.png',
         isFavorated: false,
         // description:
         // 'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
@@ -48,8 +48,8 @@ class Food {
         foodId: 2,
         price: 24,
         category: 'Snacks',
-        foodItem: 'Dabeli',
-        imageURL: 'assets/images/Dabeli.jpg',
+        foodItem: 'Dhokla',
+        imageURL: 'assets/images/dhokla new.png',
         isFavorated: true,
         // description:
         // 'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
