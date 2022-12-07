@@ -99,11 +99,11 @@ class _HomePageState extends State<HomePage> {
                         child: Stack(
                           children: [
                             Positioned(
-                              top: 10,
-                              right: 20,
+                              top: 15,
+                              right: 15,
                               child: Container(
-                                height: 50,
-                                width: 50,
+                                height: 40,
+                                width: 40,
                                 child: IconButton(
                                   onPressed: () {
                                     bool isFavorated = toggleFavorated(
@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                                     color: Color(0xff6D2113),
                                   ),
                                   color: Color(0xff6D2113),
-                                  iconSize: 30,
+                                  iconSize: 25,
                                 ),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
@@ -126,10 +126,10 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             Positioned(
-                              left: 50,
-                              right: 50,
-                              top: 50,
-                              bottom: 50,
+                              left: 15,
+                              right: 15,
+                              top: 15,
+                              bottom: 15,
                               child: Image.asset(_foodList[index].imageURL),
                             ),
                             Positioned(
