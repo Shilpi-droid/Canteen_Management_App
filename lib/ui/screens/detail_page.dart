@@ -102,7 +102,8 @@ class _DetailPageState extends State<DetailPage> {
                     left: 0,
                     // right:10,
                     child: SizedBox(
-                      height: deviceheight*.3,
+                      height: deviceheight*.35,
+                      width: devicewidth,
                       child: Image.asset(_foodList[widget.foodId].imageURL, fit: BoxFit.cover,),
                       
                     ),
