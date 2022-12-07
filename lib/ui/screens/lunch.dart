@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types, prefer_const_constructors
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,23 +13,27 @@ class lunch extends StatefulWidget {
 int count = 0;
 
 class _lunchState extends State<lunch> {
-  int counter1 = 0;
+   int counter1 = 0;
   int counter2 = 0;
-  int counter3=0;
-  int counter4=0;
-  int counter5=0;
+  int counter3 = 0;
+  int counter4 = 0;
+  int counter5 = 0;
   @override
   Widget build(BuildContext context) {
+    final deviceheight = MediaQuery.of(context).size.height;
+    final devicewidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff6D2113),
-        title: Text("Breakfast"),
+        title: Text("Lunch"),
       ),
       body: Container(
-        // decoration: BoxDecoration(
-        //   image :image
-        // ),
-
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/Group.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -35,13 +41,15 @@ class _lunchState extends State<lunch> {
               //1
 
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                // padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: devicewidth * .01, vertical: 0.1),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xff6D2113),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  height: 50,
+                  height: deviceheight * .06,
                   child: Row(
                     children: <Widget>[
                       Padding(
@@ -54,9 +62,10 @@ class _lunchState extends State<lunch> {
                         ),
                       ),
                       SizedBox(
-                        width: 200,
+                        width: devicewidth * .25,
                       ),
                       Text(
+                        
                         "Rs. 50",
                         style: TextStyle(
                           color: Colors.white,
@@ -101,15 +110,21 @@ class _lunchState extends State<lunch> {
                 ),
               ),
 
+              SizedBox(
+                height: deviceheight * .02,
+              ),
+
               ///222
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                // padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: devicewidth * .01, vertical: 0.1),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xff6D2113),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  height: 50,
+                  height: deviceheight * .06,
                   child: Row(
                     children: <Widget>[
                       Padding(
@@ -122,9 +137,10 @@ class _lunchState extends State<lunch> {
                         ),
                       ),
                       SizedBox(
-                        width: 200,
+                        width: devicewidth * .25,
                       ),
                       Text(
+                        
                         "Rs. 50",
                         style: TextStyle(
                           color: Colors.white,
@@ -171,16 +187,21 @@ class _lunchState extends State<lunch> {
                 ),
               ),
 
+              //33333
 
-        //////33333
-         Padding(
-                padding: const EdgeInsets.all(8.0),
+              SizedBox(
+                height: deviceheight * .02,
+              ),
+              Padding(
+                // padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: devicewidth * .01, vertical: 0.1),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xff6D2113),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  height: 50,
+                  height: deviceheight * .06,
                   child: Row(
                     children: <Widget>[
                       Padding(
@@ -193,7 +214,7 @@ class _lunchState extends State<lunch> {
                         ),
                       ),
                       SizedBox(
-                        width: 200,
+                        width: devicewidth * .25,
                       ),
                       Text(
                         "Rs. 50",
@@ -241,16 +262,20 @@ class _lunchState extends State<lunch> {
                   ),
                 ),
               ),
+
               ///4
-            
-               Padding(
-                padding: const EdgeInsets.all(8.0),
+              SizedBox(
+                height: deviceheight * .02,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: devicewidth * .01, vertical: 0.1),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xff6D2113),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  height: 50,
+                  height: deviceheight * .06,
                   child: Row(
                     children: <Widget>[
                       Padding(
@@ -263,7 +288,7 @@ class _lunchState extends State<lunch> {
                         ),
                       ),
                       SizedBox(
-                        width: 200,
+                        width: devicewidth * .25,
                       ),
                       Text(
                         "Rs. 50",
@@ -312,17 +337,20 @@ class _lunchState extends State<lunch> {
                 ),
               ),
 
-
               /////44444
-              
-               Padding(
-                padding: const EdgeInsets.all(8.0),
+              SizedBox(
+                height: deviceheight * .02,
+              ),
+              Padding(
+                // padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: devicewidth * .01, vertical: 0.1),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xff6D2113),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  height: 50,
+                  height: deviceheight * .06,
                   child: Row(
                     children: <Widget>[
                       Padding(
@@ -335,7 +363,7 @@ class _lunchState extends State<lunch> {
                         ),
                       ),
                       SizedBox(
-                        width: 200,
+                        width: devicewidth * .2,
                       ),
                       Text(
                         "Rs. 50",
@@ -383,6 +411,7 @@ class _lunchState extends State<lunch> {
                   ),
                 ),
               ),
+
               ///
             ],
           ),

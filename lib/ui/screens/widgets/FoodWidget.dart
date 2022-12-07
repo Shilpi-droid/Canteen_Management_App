@@ -16,6 +16,8 @@ class FoodWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final deviceheight = MediaQuery.of(context).size.height;
+      final devicewidth = MediaQuery.of(context).size.width;
 
     return GestureDetector(
       onTap: () {
@@ -56,7 +58,7 @@ class FoodWidget extends StatelessWidget {
                   left: 0,
                   right: 0,
                   child: SizedBox(
-                    height: 80.0,
+                    height: deviceheight*.1,
                     child:
                     Image.asset(foodList[index].imageURL),
                   ),

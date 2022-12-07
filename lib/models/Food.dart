@@ -12,22 +12,22 @@ class Food {
 
   Food(
       {required this.foodId,
-        required this.price,
-        required this.category,
-        required this.foodItem,
-        required this.imageURL,
-        required this.isFavorated,
-        //required this.description,
-        required this.isSelected});
+      required this.price,
+      required this.category,
+      required this.foodItem,
+      required this.imageURL,
+      required this.isFavorated,
+      //required this.description,
+      required this.isSelected});
 
   //List of Food data
   static List<Food> foodList = [
     Food(
         foodId: 0,
-        price: 22,
-        category: 'Breakfast',
-        foodItem: 'Alu Paratha',
-        imageURL: 'assets/images/AlooParatha.jpg',
+        price: 18,
+        category: 'Lunch',
+        foodItem: 'Pav Bhaji',
+        imageURL: 'assets/images/pav bhaji new.png',
         isFavorated: false,
         // description:
         // 'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
@@ -35,22 +35,22 @@ class Food {
         isSelected: false),
     Food(
         foodId: 1,
-        price: 18,
-        category: 'Lunch',
-        foodItem: 'Alu Gobi',
-        imageURL: 'assets/images/AlooGobi.jpg',
-        isFavorated: false,
+        price: 24,
+        category: 'Snacks',
+        foodItem: 'Dhokla',
+        imageURL: 'assets/images/dhokla new.png',
+        isFavorated: true,
         // description:
         // 'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
         //     'even the harshest weather condition.',
         isSelected: false),
     Food(
         foodId: 2,
-        price: 24,
-        category: 'Snacks',
-        foodItem: 'Dabeli',
-        imageURL: 'assets/images/Dabeli.jpg',
-        isFavorated: true,
+        price: 22,
+        category: 'Breakfast',
+        foodItem: 'Alu Paratha',
+        imageURL: 'assets/images/aloo paratha new.png',
+        isFavorated: false,
         // description:
         // 'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
         //     'even the harshest weather condition.',
@@ -60,7 +60,7 @@ class Food {
         price: 23,
         category: 'Dinner',
         foodItem: 'Dosa',
-        imageURL: 'assets/images/Dosa.jpg',
+        imageURL: 'assets/images/dosa new.png',
         isFavorated: false,
         // description:
         // 'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
@@ -71,13 +71,12 @@ class Food {
         price: 11,
         category: 'Breakfast',
         foodItem: 'Idli Sambhar',
-        imageURL: 'assets/images/IdliSambar.jpg',
+        imageURL: 'assets/images/idli new.png',
         isFavorated: false,
         // description:
         // 'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
         //     'even the harshest weather condition.',
         isSelected: false),
-
     Food(
         foodId: 5,
         price: 30,
@@ -89,7 +88,6 @@ class Food {
         // 'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
         //     'even the harshest weather condition.',
         isSelected: false),
-
     Food(
         foodId: 6,
         price: 24,
@@ -106,13 +104,12 @@ class Food {
         price: 19,
         category: 'Dinner',
         foodItem: 'Pav Bhaji',
-        imageURL: 'assets/images/PavBhaji.jpeg',
+        imageURL: 'assets/images/pav bhajiii.png',
         isFavorated: false,
         // description:
         // 'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
         //     'even the harshest weather condition.',
         isSelected: false),
-
     Food(
         foodId: 8,
         price: 46,
@@ -127,14 +124,16 @@ class Food {
   ];
 
   //Get the favourited items
-  static List<Food> getFavoritedFoods(){
+  static List<Food> getFavoritedFoods() {
     List<Food> _travelList = Food.foodList;
     return _travelList.where((element) => element.isFavorated == true).toList();
   }
 
   //Get the cart items
-  static List<Food> addedToCartFoods(){
+  static List<Food> addedToCartFoods() {
     List<Food> _selectedPlants = Food.foodList;
-    return _selectedPlants.where((element) => element.isSelected == true).toList();
+    return _selectedPlants
+        .where((element) => element.isSelected == true)
+        .toList();
   }
 }

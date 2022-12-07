@@ -1,3 +1,5 @@
+// ignore_for_file: sort_child_properties_last
+
 import 'package:flutter/material.dart';
 
 import '../../models/Food.dart';
@@ -24,6 +26,8 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final deviceheight = MediaQuery.of(context).size.height;
+    final devicewidth = MediaQuery.of(context).size.width;
     List<Food> _foodList = Food.foodList;
     return Scaffold(
       body: Stack(
@@ -44,9 +48,9 @@ class _DetailPageState extends State<DetailPage> {
                     width: 40,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
-                      color: Color(0xff6D2113).withOpacity(.15),
+                      color: const Color(0xff6D2113).withOpacity(.15),
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.close,
                       color: Color(0xff6D2113),
                     ),
@@ -61,7 +65,7 @@ class _DetailPageState extends State<DetailPage> {
                     width: 40,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
-                      color: Color(0xff6D2113).withOpacity(.15),
+                      color: const Color(0xff6D2113).withOpacity(.15),
                     ),
                     child: IconButton(
                         onPressed: () {
@@ -76,7 +80,7 @@ class _DetailPageState extends State<DetailPage> {
                           _foodList[widget.foodId].isFavorated == true
                               ? Icons.favorite
                               : Icons.favorite_border,
-                          color: Color(0xff6D2113),
+                          color: const Color(0xff6D2113),
                         )),
                   ),
                 ),
@@ -84,37 +88,40 @@ class _DetailPageState extends State<DetailPage> {
             ),
           ),
           Positioned(
-            top: 100,
-            left: 20,
-            right: 20,
+            top: 80,
+            left: 0,
+            // right: 0,
             child: Container(
-              width: size.width * .8,
-              height: size.height * .8,
-              padding: const EdgeInsets.all(20),
+              width: devicewidth ,
+              height: deviceheight,
+              padding: const EdgeInsets.all(10),
               child: Stack(
                 children: [
                   Positioned(
-                    top: 10,
+                    top: 0,
                     left: 0,
+                    // right:10,
                     child: SizedBox(
-                      height: 350,
-                      child: Image.asset(_foodList[widget.foodId].imageURL),
+                      height: deviceheight*.35,
+                      width: devicewidth,
+                      child: Image.asset(_foodList[widget.foodId].imageURL, fit: BoxFit.cover,),
+                      
                     ),
                   ),
-                  Positioned(
-                    top: 10,
-                    right: 0,
-                    child: SizedBox(
-                      height: 200,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                  // Positioned(
+                  //   top: 10,
+                  //   right: 0,
+                  //   child: SizedBox(
+                  //     height: 200,
+                  //     child: Column(
+                  //       crossAxisAlignment: CrossAxisAlignment.start,
+                  //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //       children: [
                           
-                        ],
-                      ),
-                    ),
-                  ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ),
@@ -128,7 +135,7 @@ class _DetailPageState extends State<DetailPage> {
               height: size.height * .5,
               width: size.width,
               decoration: BoxDecoration(
-                color: Color(0xff6D2113).withOpacity(.4),
+                color: const Color(0xff6D2113).withOpacity(.4),
                 borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(30),
                   topLeft: Radius.circular(30),
@@ -146,7 +153,7 @@ class _DetailPageState extends State<DetailPage> {
                         children: [
                           Text(
                             _foodList[widget.foodId].foodItem,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Color(0xff6D2113),
                               fontWeight: FontWeight.bold,
                               fontSize: 30.0,
@@ -157,7 +164,7 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                           Text(
                             r'$' + _foodList[widget.foodId].price.toString(),
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.black54,
                               fontSize: 24.0,
                               fontWeight: FontWeight.bold,
@@ -209,16 +216,16 @@ class _DetailPageState extends State<DetailPage> {
                 });
               }, icon: Icon(
                 Icons.shopping_cart,
-                color: _foodList[widget.foodId].isSelected == true ? Colors.white : Color(0xff6D2113),
+                color: _foodList[widget.foodId].isSelected == true ? Colors.white : const Color(0xff6D2113),
               )),
               decoration: BoxDecoration(
-                  color: _foodList[widget.foodId].isSelected == true ? Color(0xff6D2113).withOpacity(.5) : Colors.white,
+                  color: _foodList[widget.foodId].isSelected == true ? const Color(0xff6D2113).withOpacity(.5) : Colors.white,
                   borderRadius: BorderRadius.circular(50),
                   boxShadow: [
                     BoxShadow(
                       offset: const Offset(0, 1),
                       blurRadius: 5,
-                      color: Color(0xff6D2113).withOpacity(.3),
+                      color: const Color(0xff6D2113).withOpacity(.3),
                     ),
                   ]),
             ),
@@ -228,13 +235,13 @@ class _DetailPageState extends State<DetailPage> {
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                    color: Color(0xff6D2113),
+                    color: const Color(0xff6D2113),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
                         offset: const Offset(0, 1),
                         blurRadius: 5,
-                        color: Color(0xff6D2113).withOpacity(.3),
+                        color: const Color(0xff6D2113).withOpacity(.3),
                       )
                     ]),
                 child: const Center(
@@ -271,13 +278,13 @@ class PlantFeature extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.black54,
           ),
         ),
         Text(
           plantFeature,
-          style: TextStyle(
+          style: const TextStyle(
             color: Color(0xff6D2113),
             fontSize: 18.0,
             fontWeight: FontWeight.bold,
