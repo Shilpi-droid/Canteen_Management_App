@@ -18,9 +18,10 @@ class _CartPageState extends State<CartPage> {
 
   int totalAmount = 0;
   // getTotalAmount() {
-  //   var count = 0;
+  //   // var count = 0;
   //   for (int i = 0; i < widget.addedToCartFoods.length; i++) {
-  //     totalAmount=totalAmount+widget.addedToCartFoods.price[i];
+  //     // int index=widget.addedToCartFoods();
+  //     totalAmount+=Food.priceofitem(widget.priceofitem());
   // }
   @override
   Widget build(BuildContext context) {
@@ -68,7 +69,7 @@ class _CartPageState extends State<CartPage> {
           color: Color(0xff6D2113).withOpacity(0.1),
           image: DecorationImage(
             image: AssetImage("assets/images/Group.png"),
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
           ),
         ),
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 30),
@@ -81,6 +82,7 @@ class _CartPageState extends State<CartPage> {
                   scrollDirection: Axis.vertical,
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
+                    totalAmount+=Food.priceofitem(index);
                     return FoodWidget(
                         index: index, foodList: widget.addedToCartFoods);
                   }),
@@ -98,7 +100,7 @@ class _CartPageState extends State<CartPage> {
                       fontWeight: FontWeight.w300,
                     ),
                     ),
-                    Text(r'$65', style: TextStyle(
+                    Text('$totalAmount', style: TextStyle(
                       fontSize: 24.0,
                       color: Color(0xff6D2113),
                       fontWeight: FontWeight.bold,

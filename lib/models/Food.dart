@@ -136,4 +136,9 @@ class Food {
         .where((element) => element.isSelected == true)
         .toList();
   }
+
+  
+  static int priceofitem(int index){
+    return foodList[index].price;
+  }
 }

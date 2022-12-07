@@ -34,8 +34,8 @@ class FoodWidget extends StatelessWidget {
           color: Color(0xff6D2113).withOpacity(.3),
           borderRadius: BorderRadius.circular(10),
         ),
-        height: 80.0,
-        padding: const EdgeInsets.only(left: 10, top: 10),
+        height: 70.0,
+        padding: const EdgeInsets.only(left: 10, top: 10,right: 10,bottom: 10),
         margin: const EdgeInsets.only(bottom: 10, top: 10),
         width: size.width,
         child: Row(
@@ -55,10 +55,11 @@ class FoodWidget extends StatelessWidget {
                 ),
                 Positioned(
                   bottom: 5,
-                  left: 0,
-                  right: 0,
+                  top: 5,
+                  left: 2,
+                  right: 2,
                   child: SizedBox(
-                    height: deviceheight*.1,
+                    height: deviceheight*.07,
                     child:
                     Image.asset(foodList[index].imageURL),
                   ),

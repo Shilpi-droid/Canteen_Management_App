@@ -1,4 +1,4 @@
-// ignore_for_file: sort_child_properties_last
+// ignore_for_file: sort_child_properties_last, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -172,11 +172,11 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ],
                       ),
-                      Row(
-                        children: [
+                      // Row(
+                      //   children: [
                           
-                        ],
-                      ),
+                      //   ],
+                      // ),
                     ],
                   ),
                   const SizedBox(
@@ -225,7 +225,7 @@ class _DetailPageState extends State<DetailPage> {
                     BoxShadow(
                       offset: const Offset(0, 1),
                       blurRadius: 5,
-                      color: const Color(0xff6D2113).withOpacity(.3),
+                      color: const Color(0xff6D2113),
                     ),
                   ]),
             ),
