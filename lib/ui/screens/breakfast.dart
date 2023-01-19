@@ -65,7 +65,7 @@ class _breakfastState extends State<breakfast> {
                         width: devicewidth * .25,
                       ),
                       Text(
-                        "Rs. 50",
+                        "Rs. 25",
                         style: TextStyle(
                           color: Colors.white,
                         ),
@@ -129,17 +129,17 @@ class _breakfastState extends State<breakfast> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "Milk",
+                          "Coffee",
                           style: TextStyle(
                             color: Colors.white,
                           ),
                         ),
                       ),
                       SizedBox(
-                        width: devicewidth * .25,
+                        width: devicewidth * .20,
                       ),
                       Text(
-                        "Rs. 50",
+                        "Rs. 25",
                         style: TextStyle(
                           color: Colors.white,
                         ),
@@ -205,14 +205,14 @@ class _breakfastState extends State<breakfast> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "Milk",
+                          "Upma",
                           style: TextStyle(
                             color: Colors.white,
                           ),
                         ),
                       ),
                       SizedBox(
-                        width: devicewidth * .25,
+                        width: devicewidth * .22,
                       ),
                       Text(
                         "Rs. 50",
@@ -279,17 +279,17 @@ class _breakfastState extends State<breakfast> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "Milk",
+                          "Banana",
                           style: TextStyle(
                             color: Colors.white,
                           ),
                         ),
                       ),
                       SizedBox(
-                        width: devicewidth * .25,
+                        width: devicewidth * .20,
                       ),
                       Text(
-                        "Rs. 50",
+                        "Rs. 10",
                         style: TextStyle(
                           color: Colors.white,
                         ),
